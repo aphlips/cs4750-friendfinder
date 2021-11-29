@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <div class="navbar">
+     <li><a href="http://localhost/FINALProject/home.html">Home</a></li>
+     <li><a href="http://localhost/FINALProject/explore.php">Explore</a></li>
+     <li><a href="http://localhost/FINALProject/addfriend.html">Add Friend</a></li>
+     <li><a href="http://localhost/FINALProject/profile.php">Back</a></li>
+    </div>
+    <title>Friend Finder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>Add or Remove Friends</h1>
+<p>Add some friends!</p>
+
+<!-- DO add and remove all thru sql on this page using forms
+-->
+
+<div class="header">
+  <h2>Search for Friends to Add Here!</h2>
+  <p>Search for the person you want to be your friend by their Student ID!</p>
+  <p>If the add was successful, you will see an update to the Your Friends table in your Profile Page!</p>
+</div>
+
+<form method="post" action="addfriend.php">
+  <div class="input-group">
+    <label>Student ID</label>
+    <input type="text" name="name">
+  </div>
+  <div class="input-group">
+    <button type="submit" class="btn" name="submit">Submit</button>
+  </div>
+</form>
+
+
+<br>
+<div class="header">
+  <h2>Remove Friends Here</h2>
+  <p>If for any reason you want to remove a friend you already have, search for their Student ID.</p>
+</div>
+<form method="post" action="removefriend.php">
+  <div class="input-group">
+    <label>Student ID</label>
+    <input type="text" name="name">
+  </div>
+  <div class="input-group">
+    <button type="submit" class="btn" name="submit">Submit</button>
+  </div>
+</form>
+</body>
+</html>
+
