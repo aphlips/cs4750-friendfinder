@@ -2,11 +2,11 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
     <div class="navbar">
-        <a href="http://localhost/FINALProject/home.html">Home</a>
-        <a href="http://localhost/FINALProject/explore.php">Explore</a>
-        <a href="http://localhost/FINALProject/addfriend.html">Add Friend</a>
-        <a href="http://localhost/FINALProject/profile.php" class="right">Profile</a>
-    </div>
+      <li><a href="https://cs4750-friendsfinder.herokuapp.com/home.html">Home</a></li>
+      <li><a href="https://cs4750-friendsfinder.herokuapp.com/explore.php">Explore</a></li>
+      <li><a href="https://cs4750-friendsfinder.herokuapp.com/addfriend.html">Add Friend</a></li>
+      <li><a href="https://cs4750-friendsfinder.herokuapp.com/profile.php">Back</a></li>
+     </div>
     <title>Friend Finder</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +20,9 @@
     </style>
 </head>
 <body>
-    <p><a href="http://localhost/FINALProject/editprofile.html">Edit Profile</a></p>
-    <p><a href="http://localhost/FINALProject/addcourse.html">Add A Class</a></p>
-    <p><a href="http://localhost/FINALProject/dropcourse.html">Drop A Class</a></p>
+    <p><a href="https://cs4750-friendsfinder.herokuapp.com/editprofile.html">Edit Profile</a></p>
+    <p><a href="https://cs4750-friendsfinder.herokuapp.com/addcourse.html">Add A Class</a></p>
+    <p><a href="https://cs4750-friendsfinder.herokuapp.com/dropcourse.html">Drop A Class</a></p>
     <h1>
         <?php 
             session_start();
