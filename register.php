@@ -7,7 +7,18 @@ $studentID = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', '4750 proj');
+//$db = mysqli_connect('localhost', 'root', '', '4750 proj');
+
+//JAWSDB stuff
+    $url = getenv('JAWSDB_URL');
+    $dbparts = parse_url($url);
+    $hostname = $dbparts['host'];
+    $username = $dbparts['user'];
+    $password = $dbparts['pass'];
+    $database = ltrim($dbparts['path'],'/');
+
+    $db = new mysqli($hostname, $username, $password, $database);
+
 mysqli_connect_error();
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
