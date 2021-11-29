@@ -42,5 +42,5 @@
 ?>
 <br>
 <div>
- <a href="http://localhost/FINALProject/profile.php">Profile</a>
+ <a href="https://cs4750-friendsfinder.herokuapp.com/profile.php">Profile</a>
 </div>
