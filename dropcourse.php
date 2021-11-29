@@ -1,6 +1,16 @@
 <?php
 session_start();
-   $db = mysqli_connect('localhost', 'root', '', '4750_project');
+   //$db = mysqli_connect('localhost', 'root', '', '4750_project');
+
+   //JAWSDB stuff
+    $url = getenv('JAWSDB_URL');
+    $dbparts = parse_url($url);
+    $hostname = $dbparts['host'];
+    $username = $dbparts['user'];
+    $password = $dbparts['pass'];
+    $database = ltrim($dbparts['path'],'/');
+
+    $db = new mysqli($hostname, $username, $password, $database);
 
    // Check connection
    if (mysqli_connect_errno())
