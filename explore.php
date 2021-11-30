@@ -52,7 +52,6 @@
         }
         if (isset($_POST['submitCourse'])){
             $sql = "SELECT student.name, student.year, course_id, section FROM Takes NATURAL JOIN student WHERE course_id = '$_POST[classChosen]'";
-            $sql = "EXEC SelectSpecificCourses @coursePrefix = '$_POST[classChosen]'";
             $res = $db->query($sql);
         }
         if (isset($_POST['submitGrounds'])){
