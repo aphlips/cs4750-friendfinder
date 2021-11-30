@@ -62,7 +62,7 @@
             }
             $res = $db->query($sql);
         }
-        
+         $res = $db->query($sql);
         if($res->num_rows > 0){
             echo"<table><tr><th>Name</th><th>Year</th><th>Course ID</th><th>Section</th></tr>";
             while($row = $res->fetch_assoc()){
