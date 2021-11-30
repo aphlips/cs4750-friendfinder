@@ -26,8 +26,8 @@
   
     if (count($errors) == 0) {
         $password = md5($password);
-        $query = "SELECT * FROM student WHERE student_id='$studentID' AND password='$password'";
-        $results = mysqli_query($db, $query);
+        $q = "SELECT * FROM student WHERE student_id='$studentID' AND password='$password'";
+        $results = mysqli_query($db, $q);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['studentID'] = $studentID;
           $_SESSION['success'] = "You are now logged in";
