@@ -60,6 +60,23 @@ session_start();
     die('Error: ' . mysqli_error($db));
     } 
   }
+
+   if (!empty($_POST['addy_bldg']) && !empty($_POST['addy_rm'])){
+    $sql6 = "UPDATE LivesIn SET address_street='$_POST[addy_bldg]', address_room='$_POST[addy_rm]' WHERE student_id='$_SESSION[studentID]'";
+    if (!mysqli_query($db,$sql6))
+    {
+    die('Error: ' . mysqli_error($db));
+    } 
+  }
+
+   if (!empty($_POST['addy_bldg_add']) && !empty($_POST['addy_rm_add'])){
+    $sql7 = "INSERT INTO LivesIn (student_id, address_street, address_room) VALUES ('$_SESSION[studentID]','$_POST[addy_bldg_add]', '$_POST[addy_rm_add]')";
+    if (!mysqli_query($db,$sql7))
+    {
+    die('Error: ' . mysqli_error($db));
+    } 
+  }
+
   
   echo "Profile Updated Successfully"; // Output to user
   header('location: profile.php')
