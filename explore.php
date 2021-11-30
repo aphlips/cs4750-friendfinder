@@ -42,7 +42,7 @@
             $sql = "SELECT student.name, student.year, course_id, section FROM Takes NATURAL JOIN student";
             $res = $db->query($sql);
         }
-        if (isset($_POST['submitYear'])){
+        if (isset($_POST['submitYear']) && $_POST['submitYear']>0 ){
             $sql1 = "UPDATE student SET show_row='yes' WHERE year='$_POST[yearChosen]'";
             $sql2 = "UPDATE student SET show_row='no' WHERE year!='$_POST[yearChosen]'";
             $sql = "SELECT student.name, student.year, course_id, section FROM Takes NATURAL JOIN student WHERE student.show_row = 'yes'";
