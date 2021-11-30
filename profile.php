@@ -58,7 +58,8 @@
             }
         }
         else {echo "0 results";}
-    
+        $sAddy = $db->query("SELECT address_street, address_room FROM address NAUTRAL JOIN livesin WHERE student_id='$_SESSION[studentID]'");
+        echo 'Address: ' . $sAddy . '<br>';
      ?>
     
     <h2>Your Friends</h2>
