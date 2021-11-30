@@ -77,28 +77,28 @@ session_start();
     } 
   }
 
-   //new stuff
-   // for updating info
-   $sql8 = "SELECT * FROM address WHERE address_street=$_POST['addy_bldg'] AND address_room=$_POST['addy_rm']";
-   $res8 = $db->query($sql8);
-   if ($res8->num_rows == 0){
-      $sql9 = "INSERT INTO address VALUES ('$_POST[addy_bldg]', '$_POST[addy_rm]', '$_POST[addy_type]', '$_POST[grounds])";
-      if (!mysqli_query($db,$sql9))
-      {
-         die('Error: ' . mysqli_error($db));
-      }
-   }
+//    //new stuff
+//    // for updating info
+//    $sql8 = "SELECT * FROM address WHERE address_street=$_POST['addy_bldg'] AND address_room=$_POST['addy_rm']";
+//    $res8 = $db->query($sql8);
+//    if ($res8->num_rows == 0){
+//       $sql9 = "INSERT INTO address VALUES ('$_POST[addy_bldg]', '$_POST[addy_rm]', '$_POST[addy_type]', '$_POST[grounds])";
+//       if (!mysqli_query($db,$sql9))
+//       {
+//          die('Error: ' . mysqli_error($db));
+//       }
+//    }
 
-   //for new info
-   $sql10 = "SELECT * FROM address WHERE address_street=$_POST['addy_bldg_add'] AND address_room=$_POST['addy_rm_add']";
-   $res10 = $db->query($sql10);
-   if ($res10->num_rows == 0){
-      $sql11 = "INSERT INTO address VALUES ('$_POST[addy_bldg_add]', '$_POST[addy_rm_add]', '$_POST[addy_type_add]', '$_POST[grounds_add])";
-      if (!mysqli_query($db,$sql11))
-      {
-         die('Error: ' . mysqli_error($db));
-      }
-   }
+//    //for new info
+//    $sql10 = "SELECT * FROM address WHERE address_street=$_POST['addy_bldg_add'] AND address_room=$_POST['addy_rm_add']";
+//    $res10 = $db->query($sql10);
+//    if ($res10->num_rows == 0){
+//       $sql11 = "INSERT INTO address VALUES ('$_POST[addy_bldg_add]', '$_POST[addy_rm_add]', '$_POST[addy_type_add]', '$_POST[grounds_add])";
+//       if (!mysqli_query($db,$sql11))
+//       {
+//          die('Error: ' . mysqli_error($db));
+//       }
+//    }
 
 
 
